@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="chat-script.js"></script>
+    <title>Interview assignment</title>
+  </head>
+
+  <body class="body-style">
+    <div class="instructions-background">
+      <h1>1. Select the chat status (online, offline)</h1>
+      <h1>2. Click on the chat icon</h1>
+      <div class="buttons-container"></div>
+      <!--User selects the chat view he wants to see: online or offline-->
+      <button class="button-style" onclick="onlineChatStatus()">online</button>
+      <button class="button-style" onclick="offlineChatStatus()">
+        offline
+      </button>
+    </div>
+
+    <!--When clicking on the chat icon the correct chat view is displayed.-->
+    <button onclick="showChatWindow()" id="chatLogo" class="chat-logo"></button>
+
+    <div id="onlineView" style="display: none" class="chat-window-style">
+      <div class="chat-border-top">
+        <img src="images/favicon_active.png" alt="favicon" width="50px" />
+        <p>Chat with us</p>
+      </div>
+      <div class="chat-window-content-online">
+        <p class="chat-title-style">Hello there!</p>
+        <img src="images/smile.png" alt="smile" class="chat-img-style" />
+        <button class="chat-button-style">Start chat</button>
+      </div>
+    </div>
+
+    <div id="offlineView" style="display: none" class="chat-window-style">
+      <div class="chat-border-top">
+        <img
+          src="images/favicon.png"
+          alt="favicon"
+          width="22px"
+          style="margin-right: 10px"
+        />
+        <p>Chat</p>
+      </div>
+      <div class="chat-window-content-online">
+        <p class="chat-title-style">The chat is currenly closed</p>
+        <img
+          src="images/headphones.png"
+          alt="headphones"
+          class="chat-img-style"
+        />
+        <p class="chat-subtitle-style">Please try again later</p>
+      </div>
+    </div>
+  </body>
+</html>

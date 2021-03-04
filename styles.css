@@ -1,0 +1,169 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+.body-style {
+  background-image: url("images/VaasanSahko_desktop2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: "100vh";
+  /*added a fallback font in case the users browser doesn't have Nunito available*/
+  font-family: "Nunito", sans-serif;
+}
+
+.instructions-background {
+  background-color: #d0007c;
+  width: 40vw;
+  margin-top: 300px;
+  padding: 40px 40px 40px 20px;
+  color: #ffff;
+}
+
+.buttons-container {
+  margin-top: 30px;
+}
+
+.button-style {
+  padding: 15px 35px;
+}
+.chat-logo {
+  background-image: url("images/chat-logo3.png");
+  width: 70px;
+  height: 70px;
+  cursor: pointer;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-size: cover;
+  background-color: transparent;
+  border: none;
+  /*added outline none as Chrome puts a default focus border*/
+  outline: none;
+  /*added a z-index in case the button overlaps the actual chat window*/
+  z-index: 1;
+}
+
+.close-logo {
+  background-image: url("images/close-logo1.png");
+  width: 70px;
+  height: 70px;
+  cursor: pointer;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-size: cover;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  z-index: 1;
+}
+
+.chat-window-style {
+  width: 350px;
+  height: 500px;
+  position: fixed;
+  bottom: 100px;
+  right: 50px;
+  font-family: "Nunito", sans-serif;
+  box-shadow: 0px 0px 20px -2px rgba(78, 82, 86, 1);
+}
+
+.chat-border-top {
+  background-color: #d0007c;
+  padding: 10px 0 10px 10px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  color: #ffff;
+  font-size: 25px;
+  font-weight: 700;
+  display: flex;
+}
+
+.chat-window-content-online {
+  background-color: #ffff;
+  height: 430px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  line-height: 30px;
+}
+
+.chat-title-style {
+  margin-top: 80px;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.chat-subtitle-style {
+  margin-top: 20px;
+  color: #575757;
+}
+
+.chat-img-style {
+  width: 100px;
+  height: 100px;
+  margin-top: 30px;
+}
+.chat-button-style {
+  margin-top: 30px;
+  background-color: #ffff;
+  border: 2px solid #d0007c;
+  font-family: "Nunito", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #d0007c;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.chat-button-style:hover {
+  background-color: #d0007c;
+  color: #ffff;
+}
+
+@media only screen and (min-width: 600px) and (max-width: 999px) {
+  .body-style {
+    background-image: url("images/VaasanSahko_tablet.png");
+  }
+
+  .instructions-background {
+    width: 60vw;
+  }
+  /*removed hover effect for tablet*/
+  .chat-button-style {
+    background-color: #d0007c;
+    color: #ffff;
+  }
+}
+
+@media only screen and (max-width: 599px) {
+  .body-style {
+    background-image: url("images/VaasanSahko_mobile.png");
+  }
+
+  .instructions-background {
+    width: 80vw;
+    margin-top: 60px;
+    font-size: 12px;
+  }
+  /*removed hover effect for mobile*/
+  .chat-button-style {
+    background-color: #d0007c;
+    color: #ffff;
+  }
+
+  .chat-window-style {
+    width: 95vw;
+    bottom: 170px;
+    left: 10px;
+    right: 10px;
+  }
+
+  .chat-window-content-online {
+    height: 500px;
+  }
+}
