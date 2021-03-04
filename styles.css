@@ -158,12 +158,9 @@
 
   .chat-window-style {
     width: 95vw;
-    bottom: 170px;
     left: 10px;
     right: 10px;
   }
 
-  .chat-window-content-online {
-    height: 500px;
-  }
+
 }
